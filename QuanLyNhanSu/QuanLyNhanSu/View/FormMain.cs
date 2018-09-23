@@ -26,6 +26,7 @@ namespace QuanLyNhanSu.View
         }
 
 
+
         private void btnHome_Click(object sender, EventArgs e)
         {
             View main = new View();
@@ -34,17 +35,13 @@ namespace QuanLyNhanSu.View
             main.Dock = DockStyle.Fill;
         }
 
-
-
-
-
-
-        private void btnChucVu_Click(object sender, EventArgs e)
+        private void btnPhongBan_Click(object sender, EventArgs e)
         {
-            ChucVu cv = new ChucVu();
+            PhongBan pb = new PhongBan();
             splitContainer1.Panel2.Controls.Clear();
-            splitContainer1.Panel2.Controls.Add(cv);
-            cv.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(pb);
+            pb.Dock = DockStyle.Fill;
         }
+
     }
 }
