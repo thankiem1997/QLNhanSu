@@ -9,24 +9,25 @@ using QuanLyNhanSu.Object;
 
 namespace QuanLyNhanSu.Control
 {
-    class ChucVuCtrlL
+    class KhenThuongCtrlTH
     {
-        ChucVuMolL cvMod = new ChucVuMolL();
+        KhenThuongModTH ktMod = new KhenThuongModTH();
         public DataTable GetData()
         {
-            return cvMod.GetData();
+            return ktMod.GetData();
         }
-        public bool addData(ChucVuObjL cvObj)
+        public bool addData(KhenThuongObjTH ktObj)
         {
-            return cvMod.AddData(cvObj);
+            return ktMod.AddData(ktObj);
         }
-        public bool upData(ChucVuObjL cvObj)
+        public bool upData(KhenThuongObjTH ktObj)
         {
-            return cvMod.UpDate(cvObj);
+            return ktMod.UpDate(ktObj);
         }
         public bool delData(string ma)
         {
-            return cvMod.DelData(ma);
+            return ktMod.DelData(ma);
         }
+       
     }
 }

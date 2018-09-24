@@ -46,29 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\ChucVuCtrlL.cs" />
-    <Compile Include="Control\ChucVuCtrlTr.cs" />
-    <Compile Include="Model\ChucVuModTr.cs" />
-    <Compile Include="Model\ChucVuMolL.cs" />
+    <Compile Include="Control\KyLuatCtrlTh.cs" />
     <Compile Include="Model\ConectToSQL_Datvd.cs" />
     <Compile Include="Model\ConnectToSQLHoang.cs" />
+    <Compile Include="Control\KhenThuongCtrlTH.cs" />
     <Compile Include="Model\ConnectToSQLTH.cs" />
     <Compile Include="Model\ConnectToSQL_L.cs" />
     <Compile Include="Model\ConnetctToSQLTr.cs" />
-    <Compile Include="Object\ChucVuObjL.cs" />
+    <Compile Include="Model\KhenThuongModTH.cs" />
+    <Compile Include="Model\KyLuatModTH.cs" />
+    <Compile Include="Object\KhenThuongObjTH.cs" />
+    <Compile Include="Object\KyLuatObjTH.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\ChucVu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\ChucVu.Designer.cs">
-      <DependentUpon>ChucVu.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\KhenThuongTh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\KhenThuongTh.Designer.cs">
+      <DependentUpon>KhenThuongTh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\KyLuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\KyLuat.Designer.cs">
+      <DependentUpon>KyLuat.cs</DependentUpon>
     </Compile>
     <Compile Include="View\View.cs">
       <SubType>UserControl</SubType>
@@ -86,11 +93,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\ChucVu.resx">
-      <DependentUpon>ChucVu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\KhenThuongTh.resx">
+      <DependentUpon>KhenThuongTh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\KyLuat.resx">
+      <DependentUpon>KyLuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\View.resx">
       <DependentUpon>View.cs</DependentUpon>

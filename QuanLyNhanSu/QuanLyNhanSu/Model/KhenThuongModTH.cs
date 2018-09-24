@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,16 +9,16 @@ using System.Data.SqlClient;
 
 namespace QuanLyNhanSu.Model
 {
-    class ChucVuMolL
+    class KhenThuongModTH
     {
-        ConnectToSQL_L con = new ConnectToSQL_L();
+        ConnectToSQLTH con = new ConnectToSQLTH();
         SqlCommand cmd = new SqlCommand();
 
         public DataTable GetData()
         {
             DataTable dt = new DataTable();
 
-            cmd.CommandText = "select * from ChucVu";
+            cmd.CommandText = "select * from KhenThuong";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.conn;
 
@@ -37,10 +36,10 @@ namespace QuanLyNhanSu.Model
             }
             return dt;
         }
-        public bool AddData(ChucVuObjL Obj)
+        public bool AddData(KhenThuongObjTH Obj)
         {
 
-            cmd.CommandText = " insert into ChucVu (MaCV,TenCV) values('" + Obj.MaCV + "',N'" + Obj.TenCV + "')";
+            cmd.CommandText = " insert into KhenThuong (MaKT,TenKT,HinhThuc,NoiDung,QuyDoiRaTienMat) values('" + Obj.makt + "',N'" + Obj.tenkt + "',N'" + Obj.hinhthuc + "' ,N'"+Obj.noidung+"',N'"+Obj.quydoi+"')";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
 
@@ -60,10 +59,10 @@ namespace QuanLyNhanSu.Model
 
             return false;
         }
-        public bool UpDate(ChucVuObjL Obj)
+        public bool UpDate(KhenThuongObjTH Obj)
         {
 
-            cmd.CommandText = " update ChucVu set TenCV = N'" + Obj.TenCV + "' where MaCV = '" + Obj.MaCV + "'";
+            cmd.CommandText = " update KhenThuong set TenKT = N'" + Obj.tenkt + "' , HinhThuc = N'" + Obj.hinhthuc + "' , NoiDung = N'"+Obj.noidung+"' , QuyDoiRaTienMat = N'"+Obj.quydoi+"' where MaKT = '" + Obj.makt + "'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
 
@@ -90,7 +89,7 @@ namespace QuanLyNhanSu.Model
         {
             DataTable dt = new DataTable();
 
-            cmd.CommandText = " delete ChucVu where MaCV =  '" + ma + "'";
+            cmd.CommandText = " delete KhenThuong where MaKT =  '" + ma + "'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
 
@@ -109,6 +108,6 @@ namespace QuanLyNhanSu.Model
             }
             return false;
         }
-
+       
     }
 }

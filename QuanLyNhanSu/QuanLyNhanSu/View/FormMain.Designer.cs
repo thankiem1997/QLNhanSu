@@ -126,7 +126,6 @@
             this.btnChucVu.Text = "Chức Vụ";
             this.btnChucVu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnChucVu.UseVisualStyleBackColor = false;
-            this.btnChucVu.Click += new System.EventHandler(this.btnChucVu_Click);
             // 
             // btnPhongBan
             // 
@@ -238,6 +237,7 @@
             this.btnKyLuat.Text = "Kỷ Luật";
             this.btnKyLuat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnKyLuat.UseVisualStyleBackColor = false;
+            this.btnKyLuat.Click += new System.EventHandler(this.btnKyLuat_Click);
             // 
             // btnKhenTHuong
             // 
@@ -255,6 +255,7 @@
             this.btnKhenTHuong.Text = "Khen Thưởng";
             this.btnKhenTHuong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnKhenTHuong.UseVisualStyleBackColor = false;
+            this.btnKhenTHuong.Click += new System.EventHandler(this.btnKhenTHuong_Click);
             // 
             // btnBangLuong
             // 
