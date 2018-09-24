@@ -126,7 +126,6 @@
             this.btnChucVu.Text = "Chức Vụ";
             this.btnChucVu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnChucVu.UseVisualStyleBackColor = false;
-            this.btnChucVu.Click += new System.EventHandler(this.btnChucVu_Click);
             // 
             // btnPhongBan
             // 
@@ -190,6 +189,7 @@
             this.btnHeSoLuong.Text = "Hệ Số Lương";
             this.btnHeSoLuong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHeSoLuong.UseVisualStyleBackColor = false;
+            this.btnHeSoLuong.Click += new System.EventHandler(this.btnHeSoLuong_Click);
             // 
             // btnHopDong
             // 
@@ -207,6 +207,7 @@
             this.btnHopDong.Text = "Hợp Đồng";
             this.btnHopDong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHopDong.UseVisualStyleBackColor = false;
+            this.btnHopDong.Click += new System.EventHandler(this.btnHopDong_Click);
             // 
             // tabPage4
             // 
