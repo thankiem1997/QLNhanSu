@@ -19,6 +19,8 @@ namespace QuanLyNhanSu.View
 
         int check;
         DataTable dt1;
+
+
         public UCHopDong()
         {
             InitializeComponent();

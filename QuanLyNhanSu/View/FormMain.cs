@@ -25,14 +25,6 @@ namespace QuanLyNhanSu.View
             main.Dock = DockStyle.Fill;
         }
 
-        private void btnBangLuong_Click(object sender, EventArgs e)
-        {
-            BangLuong b = new BangLuong();
-            splitContainer1.Panel2.Controls.Clear();
-            splitContainer1.Panel2.Controls.Add(b);
-            b.Dock = DockStyle.Fill;
-        }
-
 
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -42,6 +34,14 @@ namespace QuanLyNhanSu.View
             main.Dock = DockStyle.Fill;
         }
 
+        private void btnHeSoLuong_Click(object sender, EventArgs e)
+        {
+            UCHeSoLuong b = new UCHeSoLuong();
+            splitContainer1.Panel2.Controls.Clear();
+            splitContainer1.Panel2.Controls.Add(b);
+            b.Dock = DockStyle.Fill;
+
+        }
 
 
     }

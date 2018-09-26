@@ -57,6 +57,16 @@
     <Compile Include="View\PhongBan.Designer.cs">
       <DependentUpon>PhongBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UCHeSoLuong.cs" />
+    <Compile Include="View\UCHeSoLuong.designer.cs">
+      <DependentUpon>UCHeSoLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCHopDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UCHopDong.Designer.cs">
+      <DependentUpon>UCHopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\View.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -74,11 +84,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
 
-    <EmbeddedResource Include="View\FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\PhongBan.resx">
-      <DependentUpon>PhongBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\View.resx">
       <DependentUpon>View.cs</DependentUpon>
