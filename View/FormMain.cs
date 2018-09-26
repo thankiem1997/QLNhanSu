@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+// da fix loi
 namespace QuanLyNhanSu.View
 {
     public partial class FormMain : Form
