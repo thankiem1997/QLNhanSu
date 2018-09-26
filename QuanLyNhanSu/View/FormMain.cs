@@ -17,7 +17,13 @@ namespace QuanLyNhanSu.View
             InitializeComponent();
         }
 
-
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            View main = new View();
+            splitContainer1.Panel2.Controls.Clear();
+            splitContainer1.Panel2.Controls.Add(main);
+            main.Dock = DockStyle.Fill;
+        }
 
         private void btnBangLuong_Click(object sender, EventArgs e)
         {
