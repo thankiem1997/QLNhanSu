@@ -126,6 +126,7 @@
             this.btnChucVu.Text = "Chức Vụ";
             this.btnChucVu.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnChucVu.UseVisualStyleBackColor = false;
+
             // 
             // btnPhongBan
             // 
@@ -143,6 +144,7 @@
             this.btnPhongBan.Text = "Phòng Ban";
             this.btnPhongBan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPhongBan.UseVisualStyleBackColor = false;
+            this.btnPhongBan.Click += new System.EventHandler(this.btnPhongBan_Click);
             // 
             // btnNhanVien
             // 

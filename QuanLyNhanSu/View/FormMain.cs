@@ -33,6 +33,7 @@ namespace QuanLyNhanSu.View
             b.Dock = DockStyle.Fill;
         }
 
+
         private void btnHome_Click(object sender, EventArgs e)
         {
             View main = new View();
@@ -40,6 +41,7 @@ namespace QuanLyNhanSu.View
             splitContainer1.Panel2.Controls.Add(main);
             main.Dock = DockStyle.Fill;
         }
+
 
 
     }
