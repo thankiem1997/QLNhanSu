@@ -46,29 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\ChucVuCtrlL.cs" />
-    <Compile Include="Control\ChucVuCtrlTr.cs" />
-    <Compile Include="Model\ChucVuModTr.cs" />
-    <Compile Include="Model\ChucVuMolL.cs" />
+    <Compile Include="Control\PhongBanCtrlL.cs" />
+    <Compile Include="Control\PhongBanCtrlTr.cs" />
     <Compile Include="Model\ConectToSQL_Datvd.cs" />
     <Compile Include="Model\ConnectToSQLHoang.cs" />
     <Compile Include="Model\ConnectToSQLTH.cs" />
     <Compile Include="Model\ConnectToSQL_L.cs" />
     <Compile Include="Model\ConnetctToSQLTr.cs" />
-    <Compile Include="Object\ChucVuObjL.cs" />
+    <Compile Include="Model\PhongBanModL.cs" />
+    <Compile Include="Model\PhongBanModTr.cs" />
+    <Compile Include="Object\PhongBanObjL.cs" />
+    <Compile Include="Object\PhongBanObjTr.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\ChucVu.cs">
+    <Compile Include="View\FormMain.cs" />
+    <Compile Include="View\FormMain.designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PhongBan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\ChucVu.Designer.cs">
-      <DependentUpon>ChucVu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\FormMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="View\PhongBan.Designer.cs">
+      <DependentUpon>PhongBan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\View.cs">
       <SubType>UserControl</SubType>
@@ -86,11 +85,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\ChucVu.resx">
-      <DependentUpon>ChucVu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PhongBan.resx">
+      <DependentUpon>PhongBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\View.resx">
       <DependentUpon>View.cs</DependentUpon>
