@@ -13,22 +13,51 @@ namespace QuanLyNhanSu.View
 {
     public partial class BangLuong : UserControl
     {
-      
-
-        private void enable(bool e)
+        BangLuongCtrlH bang = new BangLuongCtrlH();
+        DataTable dtLuong = new DataTable();
+        DataTable dtKT = new DataTable();
+        DataTable dtKL = new DataTable();
+        private string makt, makl, manv, nam, thang;
+        public BangLuong()
         {
-            txtNhanVien.ReadOnly = !e;
-            txtLuongTangCa.ReadOnly = !e;
-            nudGioTangCa.ReadOnly = !e;
-            txtLuongCoBan.ReadOnly = !e;
-            txtKhenThuong.ReadOnly = !e;
-            txtTienKhenThuong.ReadOnly = !e;
-            txtKyLuat.ReadOnly = !e;
-            txtTienKyLuat.ReadOnly = !e;
-            btnSua.Enabled = e;
-            btnHuy.Enabled = e;
-            btnLuu.Enabled = e;
+            InitializeComponent();
         }
+
+        private void btnTraCuu_Click(object sender, EventArgs e)
+        {
+            enable(false);
+            thang = nudThang.Value.ToString();
+            nam = nudNam.Value.ToString();
+            DataTable dt = bang.GetData("select Thang, Nam from BangLuong where Thang=" + thang + " and Nam=" + nam + "");
+            if (dt.Rows.Count > 0)
+            {
+                string s = "select NhanVien.MaNV, HoTen,LuongCB, LuongTangCa, SoGioTangCa, MaKL, MaKT, Tong from NhanVien, BangLuong  where BangLuong.MaNV = NhanVien.MaNV and Thang="+thang+" and Nam="+nam+"";
+                dtLuong = bang.GetData(s);
+            }
+            else
+            {
+                dt = bang.GetData("select MaNV from NhanVien");
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        string s = "declare @luongcoban float, @luongtc float " +
+                                        "select @luongcoban = LuongCB from HeSoLuong, HopDong, NhanVien " +
+                                        "where NhanVien.mahd = HopDong.MaHD and hopdong.BacLuong = HeSoLuong.BacLuong and MaNV = '" + dr["MaNV"].ToString() + "' " +
+                                        "select @luongtc = LuongTangCa from HeSoLuong, HopDong, NhanVien " +
+                                        "where NhanVien.mahd = HopDong.MaHD and hopdong.BacLuong = HeSoLuong.BacLuong and MaNV = '" + dr["MaNV"].ToString() + "' " +
+                                        "insert into BangLuong values('" + dr["MaNV"].ToString() + "', '" + thang + "', '" + nam + "', @luongcoban, @luongtc, 0, null, null, @luongcoban) ";
+                        bang.ThucHienLenh(s);
+                    }
+                }
+                MessageBox.Show("Tính toán thành công");
+                dtLuong = bang.GetData("select NhanVien.MaNV, HoTen,LuongCB, LuongTangCa, SoGioTangCa, MaKL, MaKT, Tong from NhanVien, BangLuong  where BangLuong.MaNV = NhanVien.MaNV and Thang="+thang+" and Nam="+nam+"");
+            }
+            dgvLuong.DataSource = dtLuong;
+            
+            
+        }
+
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
