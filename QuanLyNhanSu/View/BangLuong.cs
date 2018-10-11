@@ -22,6 +22,20 @@ namespace QuanLyNhanSu.View
         {
             InitializeComponent();
         }
+// form bang luong
+
+        private void BangLuong_Load(object sender, EventArgs e)
+        {
+            nudThang.Value = DateTime.Today.Month;
+            nudNam.Value = DateTime.Today.Year;
+            nudNam.Maximum = DateTime.Today.Year;
+            dtKT = bang.GetData("select MaKT, NoiDung, QuyDoiRaTienMat from KhenThuong");
+            dtKL = bang.GetData("select MaKL, NguyenNhan, QuyDoiRaTienMat from KyLuat");
+            dgvKhenThuong.DataSource = dtKT;
+            dgvKyLuat.DataSource = dtKL;
+            enable(false);
+
+        }
 
         private void btnTraCuu_Click(object sender, EventArgs e)
         {
@@ -58,6 +72,20 @@ namespace QuanLyNhanSu.View
             
         }
 
+        private void enable(bool e)
+        {
+            txtNhanVien.ReadOnly = !e;
+            txtLuongTangCa.ReadOnly = !e;
+            nudGioTangCa.ReadOnly = !e;
+            txtLuongCoBan.ReadOnly = !e;
+            txtKhenThuong.ReadOnly = !e;
+            txtTienKhenThuong.ReadOnly = !e;
+            txtKyLuat.ReadOnly = !e;
+            txtTienKyLuat.ReadOnly = !e;
+            btnSua.Enabled = e;
+            btnHuy.Enabled = e;
+            btnLuu.Enabled = e;
+        }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
