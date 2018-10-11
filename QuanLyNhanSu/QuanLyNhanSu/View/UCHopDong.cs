@@ -61,18 +61,18 @@ namespace QuanLyNhanSu.View
 
         }
 
-        // private void dgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
-        // {
-        //     if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-        //     {
-        //         txtMaHD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["MaHD"].Value);
-        //         txtTenHD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["TenHD"].Value);
-        //         txtLoaiHD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["LoaiHD"].Value);
-        //         dtpNgayBD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["NgayBatDau"].Value);
-        //         dtpNgayKT.Text = Convert.ToString(dgvSach.CurrentRow.Cells["NgayKetThuc"].Value);
-        //         cmbBacLuong.Text = Convert.ToString(dgvSach.CurrentRow.Cells["BacLuong"].Value);
-        //     }
-        // }
+        private void dgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                txtMaHD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["MaHD"].Value);
+                txtTenHD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["TenHD"].Value);
+                txtLoaiHD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["LoaiHD"].Value);
+                dtpNgayBD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["NgayBatDau"].Value);
+                dtpNgayKT.Text = Convert.ToString(dgvSach.CurrentRow.Cells["NgayKetThuc"].Value);
+                cmbBacLuong.Text = Convert.ToString(dgvSach.CurrentRow.Cells["BacLuong"].Value);
+            }
+        }
 
         private void dgvSach_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {

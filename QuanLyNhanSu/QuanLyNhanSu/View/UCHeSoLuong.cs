@@ -27,7 +27,6 @@ namespace QuanLyNhanSu.View
         {
             LoadData();
         }
-        // load data
         public void LoadData()
         {
             dt1 = new DataTable();
