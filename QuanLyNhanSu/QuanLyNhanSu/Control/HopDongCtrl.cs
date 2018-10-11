@@ -25,9 +25,9 @@ namespace QuanLyNhanSu.Control
             return HopDongMod.UpdateProfile(qh);
         }
 
-        public static int DeleteProfile(HopDongObj qh)
-        {
-            return HopDongMod.DeleteProfile(qh);
-        }
+        // public static int DeleteProfile(HopDongObj qh)
+        // {
+        //     return HopDongMod.DeleteProfile(qh);
+        // }
     }
 }

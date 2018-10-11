@@ -31,28 +31,28 @@ namespace QuanLyNhanSu.View
             LoadData();
             LoadDataLuong();
         }
-        // public void LoadData()
-        // {
-        //     dt1 = new DataTable();
-        //     dt1 = HopDongCtrl.GetData();
-        //     dgvSach.DataSource = dt1;
+        public void LoadData()
+        {
+            dt1 = new DataTable();
+            dt1 = HopDongCtrl.GetData();
+            dgvSach.DataSource = dt1;
 
-        //     txtLoaiHD.Enabled = false;
-        //     txtMaHD.Enabled = false;
-        //     txtTenHD.Enabled = false;
-        //     dtpNgayBD.Enabled = false;
-        //     dtpNgayKT.Enabled = false;
-        //     cmbBacLuong.Enabled = false;
-        //     txtTimKiem.Enabled = true;
+            txtLoaiHD.Enabled = false;
+            txtMaHD.Enabled = false;
+            txtTenHD.Enabled = false;
+            dtpNgayBD.Enabled = false;
+            dtpNgayKT.Enabled = false;
+            cmbBacLuong.Enabled = false;
+            txtTimKiem.Enabled = true;
             
 
-        //     btnHuy.Enabled = false;
-        //     btnLuu.Enabled = false;
-        //     btnThem.Enabled = true;
-        //     btnSua.Enabled = true;
-        //     btnXoa.Enabled = true;
+            btnHuy.Enabled = false;
+            btnLuu.Enabled = false;
+            btnThem.Enabled = true;
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
           
-        // }
+        }
         public void LoadDataLuong()
         {
             cmbBacLuong.DataSource = HeSoLuongCtrl.GetData();
@@ -61,18 +61,18 @@ namespace QuanLyNhanSu.View
 
         }
 
-        private void dgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                txtMaHD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["MaHD"].Value);
-                txtTenHD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["TenHD"].Value);
-                txtLoaiHD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["LoaiHD"].Value);
-                dtpNgayBD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["NgayBatDau"].Value);
-                dtpNgayKT.Text = Convert.ToString(dgvSach.CurrentRow.Cells["NgayKetThuc"].Value);
-                cmbBacLuong.Text = Convert.ToString(dgvSach.CurrentRow.Cells["BacLuong"].Value);
-            }
-        }
+        // private void dgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
+        // {
+        //     if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+        //     {
+        //         txtMaHD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["MaHD"].Value);
+        //         txtTenHD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["TenHD"].Value);
+        //         txtLoaiHD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["LoaiHD"].Value);
+        //         dtpNgayBD.Text = Convert.ToString(dgvSach.CurrentRow.Cells["NgayBatDau"].Value);
+        //         dtpNgayKT.Text = Convert.ToString(dgvSach.CurrentRow.Cells["NgayKetThuc"].Value);
+        //         cmbBacLuong.Text = Convert.ToString(dgvSach.CurrentRow.Cells["BacLuong"].Value);
+        //     }
+        // }
 
         private void dgvSach_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {

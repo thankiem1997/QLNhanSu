@@ -18,15 +18,16 @@ namespace QuanLyNhanSu.View
     {
         int check;
         DataTable dt1;
-        // public UCHeSoLuong()
-        // {
-        //     InitializeComponent();
-        // }
+        public UCHeSoLuong()
+        {
+            InitializeComponent();
+        }
 
-        // private void UCHeSoLuong_Load(object sender, EventArgs e)
-        // {
-        //     LoadData();
-        // }
+        private void UCHeSoLuong_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+        // load data
         public void LoadData()
         {
             dt1 = new DataTable();

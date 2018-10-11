@@ -42,12 +42,12 @@ namespace QuanLyNhanSu.View
 
         }
 
-        private void btnHopDong_Click(object sender, EventArgs e)
-        {
-            UCHopDong b = new UCHopDong();
-            splitContainer1.Panel2.Controls.Clear();
-            splitContainer1.Panel2.Controls.Add(b);
-            b.Dock = DockStyle.Fill;
-        }
+        // private void btnHopDong_Click(object sender, EventArgs e)
+        // {
+        //     UCHopDong b = new UCHopDong();
+        //     splitContainer1.Panel2.Controls.Clear();
+        //     splitContainer1.Panel2.Controls.Add(b);
+        //     b.Dock = DockStyle.Fill;
+        // }
     }
 }
