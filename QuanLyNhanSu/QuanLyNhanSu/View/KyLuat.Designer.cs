@@ -1,6 +1,6 @@
 ﻿namespace QuanLyNhanSu.View
 {
-    partial class KhenThuongTh
+    partial class KyLuat
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgv_kyluat = new System.Windows.Forms.DataGridView();
+            this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.makt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenkt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hinhthuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noidung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quydoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_TroVe = new System.Windows.Forms.Button();
             this.btn_Luu = new System.Windows.Forms.Button();
             this.btn_Huy = new System.Windows.Forms.Button();
@@ -38,54 +45,96 @@
             this.btn_TimKiem = new System.Windows.Forms.Button();
             this.txt_TimKiem = new System.Windows.Forms.TextBox();
             this.txt_quydoi = new System.Windows.Forms.TextBox();
-            this.txt_noidung = new System.Windows.Forms.TextBox();
+            this.txt_nguyennhan = new System.Windows.Forms.TextBox();
             this.txt_hinhthuc = new System.Windows.Forms.TextBox();
-            this.txt_tenkt = new System.Windows.Forms.TextBox();
-            this.txt_makt = new System.Windows.Forms.TextBox();
+            this.txt_tenkl = new System.Windows.Forms.TextBox();
+            this.txt_makl = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgv_KhenThuong = new System.Windows.Forms.DataGridView();
-            this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.makt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenkt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hinhthuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noidung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quydoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1.SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_KhenThuong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_kyluat)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBox2
             // 
-            this.groupBox1.Controls.Add(this.btn_TroVe);
-            this.groupBox1.Controls.Add(this.btn_Luu);
-            this.groupBox1.Controls.Add(this.btn_Huy);
-            this.groupBox1.Controls.Add(this.btn_Xoa);
-            this.groupBox1.Controls.Add(this.btn_Sua);
-            this.groupBox1.Controls.Add(this.btn_Them);
-            this.groupBox1.Controls.Add(this.btn_TimKiem);
-            this.groupBox1.Controls.Add(this.txt_TimKiem);
-            this.groupBox1.Controls.Add(this.txt_quydoi);
-            this.groupBox1.Controls.Add(this.txt_noidung);
-            this.groupBox1.Controls.Add(this.txt_hinhthuc);
-            this.groupBox1.Controls.Add(this.txt_tenkt);
-            this.groupBox1.Controls.Add(this.txt_makt);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(745, 204);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Chi Tiết Khen Thưởng";
+            this.groupBox2.Controls.Add(this.dgv_kyluat);
+            this.groupBox2.Location = new System.Drawing.Point(1, 227);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(752, 236);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Danh Sách Các Loại Khen Thưởng";
+            // 
+            // dgv_kyluat
+            // 
+            this.dgv_kyluat.AllowUserToAddRows = false;
+            this.dgv_kyluat.AllowUserToDeleteRows = false;
+            this.dgv_kyluat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_kyluat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stt,
+            this.makt,
+            this.tenkt,
+            this.hinhthuc,
+            this.noidung,
+            this.quydoi});
+            this.dgv_kyluat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_kyluat.Location = new System.Drawing.Point(3, 16);
+            this.dgv_kyluat.Name = "dgv_kyluat";
+            this.dgv_kyluat.ReadOnly = true;
+            this.dgv_kyluat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_kyluat.Size = new System.Drawing.Size(746, 217);
+            this.dgv_kyluat.TabIndex = 0;
+            this.dgv_kyluat.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgv_kyluat_RowPrePaint);
+            // 
+            // stt
+            // 
+            this.stt.HeaderText = "STT";
+            this.stt.Name = "stt";
+            this.stt.ReadOnly = true;
+            // 
+            // makt
+            // 
+            this.makt.DataPropertyName = "MaKT";
+            this.makt.HeaderText = "Mã Khen Thưởng";
+            this.makt.Name = "makt";
+            this.makt.ReadOnly = true;
+            // 
+            // tenkt
+            // 
+            this.tenkt.DataPropertyName = "TenKT";
+            this.tenkt.FillWeight = 160F;
+            this.tenkt.HeaderText = "Tên Khen Thưởng";
+            this.tenkt.Name = "tenkt";
+            this.tenkt.ReadOnly = true;
+            this.tenkt.Width = 140;
+            // 
+            // hinhthuc
+            // 
+            this.hinhthuc.DataPropertyName = "HinhThuc";
+            this.hinhthuc.HeaderText = "Hình Thức";
+            this.hinhthuc.Name = "hinhthuc";
+            this.hinhthuc.ReadOnly = true;
+            // 
+            // noidung
+            // 
+            this.noidung.DataPropertyName = "NoiDung";
+            this.noidung.FillWeight = 160F;
+            this.noidung.HeaderText = "Nội Dung";
+            this.noidung.Name = "noidung";
+            this.noidung.ReadOnly = true;
+            this.noidung.Width = 160;
+            // 
+            // quydoi
+            // 
+            this.quydoi.DataPropertyName = "QuyDoiRaTienMat";
+            this.quydoi.HeaderText = "Quy Đổi Ra Tiền Mặt";
+            this.quydoi.Name = "quydoi";
+            this.quydoi.ReadOnly = true;
             // 
             // btn_TroVe
             // 
@@ -173,13 +222,14 @@
             this.txt_quydoi.Name = "txt_quydoi";
             this.txt_quydoi.Size = new System.Drawing.Size(238, 20);
             this.txt_quydoi.TabIndex = 9;
+            this.txt_quydoi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_quydoi_KeyPress);
             // 
-            // txt_noidung
+            // txt_nguyennhan
             // 
-            this.txt_noidung.Location = new System.Drawing.Point(139, 114);
-            this.txt_noidung.Name = "txt_noidung";
-            this.txt_noidung.Size = new System.Drawing.Size(238, 20);
-            this.txt_noidung.TabIndex = 8;
+            this.txt_nguyennhan.Location = new System.Drawing.Point(139, 114);
+            this.txt_nguyennhan.Name = "txt_nguyennhan";
+            this.txt_nguyennhan.Size = new System.Drawing.Size(238, 20);
+            this.txt_nguyennhan.TabIndex = 8;
             // 
             // txt_hinhthuc
             // 
@@ -188,19 +238,19 @@
             this.txt_hinhthuc.Size = new System.Drawing.Size(238, 20);
             this.txt_hinhthuc.TabIndex = 7;
             // 
-            // txt_tenkt
+            // txt_tenkl
             // 
-            this.txt_tenkt.Location = new System.Drawing.Point(139, 53);
-            this.txt_tenkt.Name = "txt_tenkt";
-            this.txt_tenkt.Size = new System.Drawing.Size(238, 20);
-            this.txt_tenkt.TabIndex = 6;
+            this.txt_tenkl.Location = new System.Drawing.Point(139, 53);
+            this.txt_tenkl.Name = "txt_tenkl";
+            this.txt_tenkl.Size = new System.Drawing.Size(238, 20);
+            this.txt_tenkl.TabIndex = 6;
             // 
-            // txt_makt
+            // txt_makl
             // 
-            this.txt_makt.Location = new System.Drawing.Point(139, 23);
-            this.txt_makt.Name = "txt_makt";
-            this.txt_makt.Size = new System.Drawing.Size(238, 20);
-            this.txt_makt.TabIndex = 5;
+            this.txt_makl.Location = new System.Drawing.Point(139, 23);
+            this.txt_makl.Name = "txt_makl";
+            this.txt_makl.Size = new System.Drawing.Size(238, 20);
+            this.txt_makl.TabIndex = 5;
             // 
             // label5
             // 
@@ -216,9 +266,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(26, 117);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.Size = new System.Drawing.Size(79, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Nội Dung :";
+            this.label4.Text = "Nguyên Nhân :";
             // 
             // label3
             // 
@@ -234,129 +284,67 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(26, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 13);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Tên Khen Thưởng :";
+            this.label2.Text = "Tên Ky Luật :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(26, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mã Khen Thưởng :";
+            this.label1.Text = "Mã Kỷ Luật :";
             // 
-            // groupBox2
+            // groupBox1
             // 
-            this.groupBox2.Controls.Add(this.dgv_KhenThuong);
-            this.groupBox2.Location = new System.Drawing.Point(0, 225);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(752, 236);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Danh Sách Các Loại Khen Thưởng";
+            this.groupBox1.Controls.Add(this.btn_TroVe);
+            this.groupBox1.Controls.Add(this.btn_Luu);
+            this.groupBox1.Controls.Add(this.btn_Huy);
+            this.groupBox1.Controls.Add(this.btn_Xoa);
+            this.groupBox1.Controls.Add(this.btn_Sua);
+            this.groupBox1.Controls.Add(this.btn_Them);
+            this.groupBox1.Controls.Add(this.btn_TimKiem);
+            this.groupBox1.Controls.Add(this.txt_TimKiem);
+            this.groupBox1.Controls.Add(this.txt_quydoi);
+            this.groupBox1.Controls.Add(this.txt_nguyennhan);
+            this.groupBox1.Controls.Add(this.txt_hinhthuc);
+            this.groupBox1.Controls.Add(this.txt_tenkl);
+            this.groupBox1.Controls.Add(this.txt_makl);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(1, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(745, 204);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chi Tiết Khen Thưởng";
             // 
-            // dgv_KhenThuong
-            // 
-            this.dgv_KhenThuong.AllowUserToAddRows = false;
-            this.dgv_KhenThuong.AllowUserToDeleteRows = false;
-            this.dgv_KhenThuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_KhenThuong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stt,
-            this.makt,
-            this.tenkt,
-            this.hinhthuc,
-            this.noidung,
-            this.quydoi});
-            this.dgv_KhenThuong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_KhenThuong.Location = new System.Drawing.Point(3, 16);
-            this.dgv_KhenThuong.Name = "dgv_KhenThuong";
-            this.dgv_KhenThuong.ReadOnly = true;
-            this.dgv_KhenThuong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_KhenThuong.Size = new System.Drawing.Size(746, 217);
-            this.dgv_KhenThuong.TabIndex = 0;
-            this.dgv_KhenThuong.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgv_kyluat_RowPrePaint);
-            // 
-            // stt
-            // 
-            this.stt.HeaderText = "STT";
-            this.stt.Name = "stt";
-            this.stt.ReadOnly = true;
-            // 
-            // makt
-            // 
-            this.makt.DataPropertyName = "MaKT";
-            this.makt.HeaderText = "Mã Khen Thưởng";
-            this.makt.Name = "makt";
-            this.makt.ReadOnly = true;
-            // 
-            // tenkt
-            // 
-            this.tenkt.DataPropertyName = "TenKT";
-            this.tenkt.FillWeight = 160F;
-            this.tenkt.HeaderText = "Tên Khen Thưởng";
-            this.tenkt.Name = "tenkt";
-            this.tenkt.ReadOnly = true;
-            this.tenkt.Width = 140;
-            // 
-            // hinhthuc
-            // 
-            this.hinhthuc.DataPropertyName = "HinhThuc";
-            this.hinhthuc.HeaderText = "Hình Thức";
-            this.hinhthuc.Name = "hinhthuc";
-            this.hinhthuc.ReadOnly = true;
-            // 
-            // noidung
-            // 
-            this.noidung.DataPropertyName = "NoiDung";
-            this.noidung.FillWeight = 160F;
-            this.noidung.HeaderText = "Nội Dung";
-            this.noidung.Name = "noidung";
-            this.noidung.ReadOnly = true;
-            this.noidung.Width = 160;
-            // 
-            // quydoi
-            // 
-            this.quydoi.DataPropertyName = "QuyDoiRaTienMat";
-            this.quydoi.HeaderText = "Quy Đổi Ra Tiền Mặt";
-            this.quydoi.Name = "quydoi";
-            this.quydoi.ReadOnly = true;
-            // 
-            // KhenThuongTh
+            // KyLuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "KhenThuongTh";
+            this.Name = "KyLuat";
             this.Size = new System.Drawing.Size(755, 464);
-            this.Load += new System.EventHandler(this.KhenThuongTh_Load);
+            this.Load += new System.EventHandler(this.KyLuat_Load);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_kyluat)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_KhenThuong)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_quydoi;
-        private System.Windows.Forms.TextBox txt_noidung;
-        private System.Windows.Forms.TextBox txt_hinhthuc;
-        private System.Windows.Forms.TextBox txt_tenkt;
-        private System.Windows.Forms.TextBox txt_makt;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgv_KhenThuong;
-        private System.Windows.Forms.Button btn_TimKiem;
-        private System.Windows.Forms.TextBox txt_TimKiem;
+        private System.Windows.Forms.DataGridView dgv_kyluat;
         private System.Windows.Forms.DataGridViewTextBoxColumn stt;
         private System.Windows.Forms.DataGridViewTextBoxColumn makt;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenkt;
@@ -369,5 +357,18 @@
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Button btn_Them;
+        private System.Windows.Forms.Button btn_TimKiem;
+        private System.Windows.Forms.TextBox txt_TimKiem;
+        private System.Windows.Forms.TextBox txt_quydoi;
+        private System.Windows.Forms.TextBox txt_nguyennhan;
+        private System.Windows.Forms.TextBox txt_hinhthuc;
+        private System.Windows.Forms.TextBox txt_tenkl;
+        private System.Windows.Forms.TextBox txt_makl;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
