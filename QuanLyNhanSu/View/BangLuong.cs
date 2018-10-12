@@ -22,7 +22,6 @@ namespace QuanLyNhanSu.View
         {
             InitializeComponent();
         }
-// form bang luong
 
         private void BangLuong_Load(object sender, EventArgs e)
         {

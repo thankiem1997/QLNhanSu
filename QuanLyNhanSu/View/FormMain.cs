@@ -24,7 +24,7 @@ namespace QuanLyNhanSu.View
             splitContainer1.Panel2.Controls.Add(main);
             main.Dock = DockStyle.Fill;
         }
-//oad bang luong
+
         private void btnBangLuong_Click(object sender, EventArgs e)
         {
             BangLuong b = new BangLuong();
