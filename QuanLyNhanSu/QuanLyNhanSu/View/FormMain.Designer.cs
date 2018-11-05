@@ -144,6 +144,7 @@
             this.btnPhongBan.Text = "Phòng Ban";
             this.btnPhongBan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPhongBan.UseVisualStyleBackColor = false;
+            this.btnPhongBan.Click += new System.EventHandler(this.btnPhongBan_Click);
             // 
             // btnNhanVien
             // 
@@ -160,6 +161,7 @@
             this.btnNhanVien.Text = "Nhân Viên";
             this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNhanVien.UseVisualStyleBackColor = false;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // tabPage3
             // 
@@ -190,6 +192,7 @@
             this.btnHeSoLuong.Text = "Hệ Số Lương";
             this.btnHeSoLuong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHeSoLuong.UseVisualStyleBackColor = false;
+            this.btnHeSoLuong.Click += new System.EventHandler(this.btnHeSoLuong_Click);
             // 
             // btnHopDong
             // 
@@ -207,6 +210,7 @@
             this.btnHopDong.Text = "Hợp Đồng";
             this.btnHopDong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnHopDong.UseVisualStyleBackColor = false;
+            this.btnHopDong.Click += new System.EventHandler(this.btnHopDong_Click);
             // 
             // tabPage4
             // 
@@ -238,6 +242,7 @@
             this.btnKyLuat.Text = "Kỷ Luật";
             this.btnKyLuat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnKyLuat.UseVisualStyleBackColor = false;
+            this.btnKyLuat.Click += new System.EventHandler(this.btnKyLuat_Click);
             // 
             // btnKhenTHuong
             // 
@@ -255,6 +260,7 @@
             this.btnKhenTHuong.Text = "Khen Thưởng";
             this.btnKhenTHuong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnKhenTHuong.UseVisualStyleBackColor = false;
+            this.btnKhenTHuong.Click += new System.EventHandler(this.btnKhenTHuong_Click);
             // 
             // btnBangLuong
             // 
@@ -272,6 +278,7 @@
             this.btnBangLuong.Text = "Bảng Lương";
             this.btnBangLuong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBangLuong.UseVisualStyleBackColor = false;
+            this.btnBangLuong.Click += new System.EventHandler(this.btnBangLuong_Click);
             // 
             // splitContainer1
             // 
